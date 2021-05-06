@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class FineLongWordOnceAgainTest {
 
     @Test
-    public void testGetFineLongWordOnceAgainButNowInAReverseWay() {
+    void testGetFineLongWordOnceAgainButNowInAReverseWay() {
         char[][] fineLongWordInAnArrayOfArrays = new FineLongWordOnceAgain().getFineLongWordOnceAgainButNowInAReverseWay("IllegalArgumentException", 6);
 
         assertEquals(19, fineLongWordInAnArrayOfArrays.length);
@@ -16,7 +16,7 @@ class FineLongWordOnceAgainTest {
     }
 
     @Test
-    public void testGetFineLongWordOnceAgainButNowInAReverseWayWithIllegalParameter() {
+    void testGetFineLongWordOnceAgainButNowInAReverseWayWithIllegalParameter() {
         Exception ex = assertThrows(IllegalArgumentException.class,
                 () -> new FineLongWordOnceAgain().getFineLongWordOnceAgainButNowInAReverseWay("IllegalArgumentException", 100));
         assertEquals("Number of letters cannot be more than length of the word!", ex.getMessage());
